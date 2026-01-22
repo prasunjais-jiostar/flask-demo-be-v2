@@ -1,6 +1,12 @@
 #!/bin/bash
 set -e
 
+echo "Creating virtual environment: chatterbox_venv"
+python3 -m venv chatterbox_venv
+
+echo "Activating virtual environment..."
+source chatterbox_venv/bin/activate
+
 echo "Installing chatterbox-tts and dependencies..."
 
 # First install build dependencies and ensure we get the right pkuseg version
@@ -26,4 +32,5 @@ pip install \
 # Now install chatterbox-tts without dependencies since we've installed them manually
 pip install --no-deps chatterbox-tts==0.1.4
 
-echo "Chatterbox-tts installation complete!"
+echo "Chatterbox-tts installation complete in chatterbox_venv!"
+echo "To activate this environment, run: source chatterbox_venv/bin/activate"
