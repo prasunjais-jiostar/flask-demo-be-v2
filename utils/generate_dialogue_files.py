@@ -90,7 +90,3 @@ def main():
     print("-" * 50)
     
     create_dialogue_files(input_json_path, output_folder)
-
-
-if __name__ == "__main__":
-    main()
