@@ -103,9 +103,9 @@ def generate_script():
         return jsonify({
             'status': 'success',
             'message': 'Script generated and saved successfully',
+            'script': script_text,
             'data': {
                 'script_id': script_id,
-                'script': script_text,
                 'timestamp': datetime.now().isoformat()
             }
         }), 200
